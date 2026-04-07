@@ -2,7 +2,7 @@
 from random import randint
 
 # Input
-guess = str(input("Guess the secret number (1 - 10): "))
+guess = int(input("Guess the secret number (1 - 10): "))
 secret = randint(1, 10)
 
 # Logic (runs once, didn't say use a loop :/ )
