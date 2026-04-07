@@ -28,6 +28,7 @@ while True:
     # Minor Cleanup
     StudentLastName = StudentLastName.strip().title()
     StudentFirstName = StudentFirstName.strip().title()
+    StudentGPA = round(StudentGPA, 4)
 
     # Logic
     if StudentGPA >= 3.25:
