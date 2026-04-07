@@ -6,22 +6,32 @@ NonHonorStudent = ''
 HonorListStudent = ''
 HonorRollStudent = ''
 
-while True == True:
+while True:
     StudentLastName = str(input(f"Please enter the student's last name: "))
     if StudentLastName == 'ZZZ':
         quit()
     StudentFirstName = str(input(f"Please enter the student's first name: "))
-    StudentGPA = str(input(f"Please enter the student's current GPA: "))
 
+    try:
+        StudentGPA = float(input(f"Please enter the student's current GPA: "))
+    except ValueError:
+        print(f"\nInvalid input for GPA. Please enter a numeric value.\n")
+        continue
+
+    # Logic
     if StudentGPA <= 3.25:
         if StudentGPA <= 3.5:
-            print(f"{HonorRollStudent}")
+            print(f"{} {HonorRollStudent}")
         else:
             print(f"{HonorListStudent}")
 
     else:
         print(f"{NonHonorStudent}")
 
+    # Cleanup
+    StudentLastName = ''
+    StudentFirstName = ''
+    StudentGPA = ''
 
 '''
 Ask last name //StudentLastName
