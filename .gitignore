@@ -1,13 +1,14 @@
 # Secrets
-.env.*
 .env
+.env.*
 
 # Python
 __pycache__/
 *.pyc
 *.py[cod]
-*.venv/
 .venv/
+*.venv/
 
 # Other
 .vscode
+.vscode/
